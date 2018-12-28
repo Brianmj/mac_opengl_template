@@ -50,7 +50,7 @@
 		89FF4B4521CDDA7E00CB21B4 = {
 			isa = PBXGroup;
 			children = (
-				89FF4B5021CDDA7E00CB21B4 /* template */,
+				89FF4B5021CDDA7E00CB21B4 /* src */,
 				89FF4B4F21CDDA7E00CB21B4 /* Products */,
 				89FF4B5C21CDE58100CB21B4 /* Frameworks */,
 			);
@@ -64,14 +64,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		89FF4B5021CDDA7E00CB21B4 /* template */ = {
+		89FF4B5021CDDA7E00CB21B4 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				89FF4B6021CDED7400CB21B4 /* app.cpp */,
 				89FF4B5F21CDED7400CB21B4 /* app.hpp */,
 				89FF4B5121CDDA7E00CB21B4 /* main.cpp */,
 			);
-			path = template;
+			path = src;
 			sourceTree = "<group>";
 		};
 		89FF4B5C21CDE58100CB21B4 /* Frameworks */ = {
@@ -271,7 +271,7 @@
 					"$(inherited)",
 					GL_SILENCE_DEPRECATION,
 				);
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/knu_2018\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/src/knu_2018\"";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -285,7 +285,7 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/knu_2018\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/src/knu_2018\"";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
