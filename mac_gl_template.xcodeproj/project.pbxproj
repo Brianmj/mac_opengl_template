@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		89FF4B5221CDDA7E00CB21B4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89FF4B5121CDDA7E00CB21B4 /* main.cpp */; };
+		89FF4B5E21CDE58100CB21B4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FF4B5D21CDE58100CB21B4 /* OpenGL.framework */; };
+		89FF4B6121CDED7400CB21B4 /* app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89FF4B6021CDED7400CB21B4 /* app.cpp */; };
+		89FF4B6421CDEFA200CB21B4 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FF4B6321CDEFA200CB21B4 /* SDL2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		89FF4B4E21CDDA7E00CB21B4 /* glfw_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = glfw_test; sourceTree = BUILT_PRODUCTS_DIR; };
+		89FF4B4E21CDDA7E00CB21B4 /* mac_gl_template */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mac_gl_template; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FF4B5121CDDA7E00CB21B4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		89FF4B5D21CDE58100CB21B4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		89FF4B5F21CDED7400CB21B4 /* app.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = app.hpp; sourceTree = "<group>"; };
+		89FF4B6021CDED7400CB21B4 /* app.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = app.cpp; sourceTree = "<group>"; };
+		89FF4B6321CDEFA200CB21B4 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89FF4B6421CDEFA200CB21B4 /* SDL2.framework in Frameworks */,
+				89FF4B5E21CDE58100CB21B4 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,33 +50,45 @@
 		89FF4B4521CDDA7E00CB21B4 = {
 			isa = PBXGroup;
 			children = (
-				89FF4B5021CDDA7E00CB21B4 /* glfw_test */,
+				89FF4B5021CDDA7E00CB21B4 /* template */,
 				89FF4B4F21CDDA7E00CB21B4 /* Products */,
+				89FF4B5C21CDE58100CB21B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		89FF4B4F21CDDA7E00CB21B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				89FF4B4E21CDDA7E00CB21B4 /* glfw_test */,
+				89FF4B4E21CDDA7E00CB21B4 /* mac_gl_template */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		89FF4B5021CDDA7E00CB21B4 /* glfw_test */ = {
+		89FF4B5021CDDA7E00CB21B4 /* template */ = {
 			isa = PBXGroup;
 			children = (
+				89FF4B6021CDED7400CB21B4 /* app.cpp */,
+				89FF4B5F21CDED7400CB21B4 /* app.hpp */,
 				89FF4B5121CDDA7E00CB21B4 /* main.cpp */,
 			);
-			path = glfw_test;
+			path = template;
+			sourceTree = "<group>";
+		};
+		89FF4B5C21CDE58100CB21B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89FF4B6321CDEFA200CB21B4 /* SDL2.framework */,
+				89FF4B5D21CDE58100CB21B4 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		89FF4B4D21CDDA7E00CB21B4 /* glfw_test */ = {
+		89FF4B4D21CDDA7E00CB21B4 /* mac_gl_template */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 89FF4B5521CDDA7E00CB21B4 /* Build configuration list for PBXNativeTarget "glfw_test" */;
+			buildConfigurationList = 89FF4B5521CDDA7E00CB21B4 /* Build configuration list for PBXNativeTarget "mac_gl_template" */;
 			buildPhases = (
 				89FF4B4A21CDDA7E00CB21B4 /* Sources */,
 				89FF4B4B21CDDA7E00CB21B4 /* Frameworks */,
@@ -77,9 +98,9 @@
 			);
 			dependencies = (
 			);
-			name = glfw_test;
+			name = mac_gl_template;
 			productName = glfw_test;
-			productReference = 89FF4B4E21CDDA7E00CB21B4 /* glfw_test */;
+			productReference = 89FF4B4E21CDDA7E00CB21B4 /* mac_gl_template */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +117,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 89FF4B4921CDDA7E00CB21B4 /* Build configuration list for PBXProject "glfw_test" */;
+			buildConfigurationList = 89FF4B4921CDDA7E00CB21B4 /* Build configuration list for PBXProject "mac_gl_template" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,7 +129,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				89FF4B4D21CDDA7E00CB21B4 /* glfw_test */,
+				89FF4B4D21CDDA7E00CB21B4 /* mac_gl_template */,
 			);
 		};
 /* End PBXProject section */
@@ -119,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89FF4B5221CDDA7E00CB21B4 /* main.cpp in Sources */,
+				89FF4B6121CDED7400CB21B4 /* app.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +262,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					GL_SILENCE_DEPRECATION,
+				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/knu_2018\"";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +281,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/knu_2018\"";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -255,7 +294,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		89FF4B4921CDDA7E00CB21B4 /* Build configuration list for PBXProject "glfw_test" */ = {
+		89FF4B4921CDDA7E00CB21B4 /* Build configuration list for PBXProject "mac_gl_template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				89FF4B5321CDDA7E00CB21B4 /* Debug */,
@@ -264,7 +303,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89FF4B5521CDDA7E00CB21B4 /* Build configuration list for PBXNativeTarget "glfw_test" */ = {
+		89FF4B5521CDDA7E00CB21B4 /* Build configuration list for PBXNativeTarget "mac_gl_template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				89FF4B5621CDDA7E00CB21B4 /* Debug */,
