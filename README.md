@@ -19,9 +19,9 @@
 
  */
 
-template <typename T1>
-knu::math::mat4<T1> make_ortho2(T1 left, T1 right, T1 bottom, T1 top, T1 Znear, T1 Zfar)
-{
+    template <typename T1>
+    knu::math::mat4<T1> make_ortho2(T1 left, T1 right, T1 bottom, T1 top, T1 Znear, T1 Zfar)
+    {
     float tx = (right + left) / (right - left);
     float ty = (top + bottom) / (top - bottom);
     float tz = (Zfar + Znear) / (Zfar - Znear);
@@ -33,7 +33,7 @@ knu::math::mat4<T1> make_ortho2(T1 left, T1 right, T1 bottom, T1 top, T1 Znear, 
     ortho = ortho.set_column_3(-tx, -ty, -tz, 1);
     
     return ortho;
-}
+    }
 
 template<typename T1>
 knu::math::mat4<T1> make_frustrum(T1 left, T1 right, T1 bottom, T1 top, T1 zNear, T1 zFar)
