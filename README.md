@@ -22,17 +22,17 @@
     template <typename T1>
     knu::math::mat4<T1> make_ortho2(T1 left, T1 right, T1 bottom, T1 top, T1 Znear, T1 Zfar)
     {
-    float tx = (right + left) / (right - left);
-    float ty = (top + bottom) / (top - bottom);
-    float tz = (Zfar + Znear) / (Zfar - Znear);
-    knu::math::mat4<T1> ortho;
-    
-    ortho = ortho.set_column_0(2 / (right - left), 0, 0, 0);
-    ortho = ortho.set_column_1(0, 2 / (top - bottom), 0, 0);
-    ortho = ortho.set_column_2(0, 0, 2 / (Znear - Zfar), 0);
-    ortho = ortho.set_column_3(-tx, -ty, -tz, 1);
-    
-    return ortho;
+        float tx = (right + left) / (right - left);
+        float ty = (top + bottom) / (top - bottom);
+        float tz = (Zfar + Znear) / (Zfar - Znear);
+        knu::math::mat4<T1> ortho;
+
+        ortho = ortho.set_column_0(2 / (right - left), 0, 0, 0);
+        ortho = ortho.set_column_1(0, 2 / (top - bottom), 0, 0);
+        ortho = ortho.set_column_2(0, 0, 2 / (Znear - Zfar), 0);
+        ortho = ortho.set_column_3(-tx, -ty, -tz, 1);
+
+        return ortho;
     }
 
     template<typename T1>
