@@ -7,13 +7,13 @@
  
  IN THE APPLICATION, DO THE FOLLOWING:
  
- matrix4f modelview = matrix4f::translation_matrix(0.0f, 0.0f, -5.0f);
- matrix4f mvp =  modelview * perspective_matrix;
- glProgramUniformMatrix4fv(quad_program.obj(), mvp_uniform, 1, false, mvp.data());
+     matrix4f modelview = matrix4f::translation_matrix(0.0f, 0.0f, -5.0f);
+     matrix4f mvp =  modelview * perspective_matrix;
+     glProgramUniformMatrix4fv(quad_program.obj(), mvp_uniform, 1, false, mvp.data());
  
  If you want to use the opengl style syntax:
  
- gl_Position = mvp * position;
+     gl_Position = mvp * position;
  
  YOU MUST PASS TRUE FOR TRANSPOSE
 
