@@ -3,7 +3,7 @@
 /*
  THESE FUNCTIONS WORK ====== MAKE SURE IN THE SHADER YOU PASS LIKE SO:
  
-  gl_Position = position * mvp;
+     gl_Position = position * mvp;
  
  IN THE APPLICATION, DO THE FOLLOWING:
  
