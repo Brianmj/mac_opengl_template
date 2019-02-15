@@ -6,13 +6,13 @@
 #include <functional>
 #include <string>
 
-#ifdef _WIN32
+#ifdef WIN32
 #pragma comment(lib, "sdl2.lib")
 #pragma comment(lib, "sdl2main.lib")
-#pragma comment(lib, "glew32.lib")
+#pragma comment(lib, "glew32s.lib")
 #pragma comment(lib, "opengl32.lib")
 
-//#define GLEW_STATIC
+#define GLEW_STATIC
 #include <GL/glew.h>
 #include <SDL.h>
 #undef main
@@ -23,7 +23,7 @@
 #include <SDL2/SDL.h>
 #endif
 
-class window_class
+class Window
 {
 	SDL_Window *window;
 	SDL_GLContext context;
@@ -42,7 +42,7 @@ private:
 	//		set_quit(true);
 	}
 public:
-	window_class():
+	Window():
 		window(nullptr),
 		context(0),
 		quit(false)
@@ -55,13 +55,13 @@ public:
 		}
 	}
 
-	window_class(int width, int height, int majorVersion, int minorVersion, bool debug, int depthBits = 24, int stencilBits = 0, unsigned flags = SDL_WINDOW_RESIZABLE | SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL) :
-		window_class()
+	Window(int width, int height, int majorVersion, int minorVersion, bool debug, int depthBits = 24, int stencilBits = 0, unsigned flags = SDL_WINDOW_RESIZABLE | SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL) :
+		Window()
 	{
 		create(width, height, majorVersion, minorVersion, debug, depthBits, stencilBits, flags);
 	}
 
-	~window_class()
+	~Window()
 	{
 		SDL_GL_MakeCurrent(window, 0);
 		SDL_GL_DeleteContext(context);
@@ -108,7 +108,7 @@ public:
         SDL_GL_GetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, &requestedMinorVersion);
         
 
-#ifdef _WIN32
+#ifdef WIN32
 		glewExperimental = true;
 		GLenum val = glewInit();
 #endif

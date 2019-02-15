@@ -6,15 +6,11 @@
 //  Copyright © 2018 Brian Jones. All rights reserved.
 //
 
-#include <iostream>
+
 #include "app.hpp"
 
-
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-
-    App my_app;
-    
-    return my_app.run();
+int main()
+{
+    main_app app;
+    return app.run();
 }

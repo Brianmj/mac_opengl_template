@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89A376722216FA5F002A0297 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A376712216FA5F002A0297 /* SDL2.framework */; };
 		89FF4B5221CDDA7E00CB21B4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89FF4B5121CDDA7E00CB21B4 /* main.cpp */; };
 		89FF4B5E21CDE58100CB21B4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FF4B5D21CDE58100CB21B4 /* OpenGL.framework */; };
 		89FF4B6121CDED7400CB21B4 /* app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89FF4B6021CDED7400CB21B4 /* app.cpp */; };
-		89FF4B6421CDEFA200CB21B4 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FF4B6321CDEFA200CB21B4 /* SDL2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,12 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		89A376712216FA5F002A0297 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		89FF4B4E21CDDA7E00CB21B4 /* mac_gl_template */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mac_gl_template; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FF4B5121CDDA7E00CB21B4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		89FF4B5D21CDE58100CB21B4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		89FF4B5F21CDED7400CB21B4 /* app.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = app.hpp; sourceTree = "<group>"; };
 		89FF4B6021CDED7400CB21B4 /* app.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = app.cpp; sourceTree = "<group>"; };
-		89FF4B6321CDEFA200CB21B4 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89FF4B6421CDEFA200CB21B4 /* SDL2.framework in Frameworks */,
+				89A376722216FA5F002A0297 /* SDL2.framework in Frameworks */,
 				89FF4B5E21CDE58100CB21B4 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +77,7 @@
 		89FF4B5C21CDE58100CB21B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				89FF4B6321CDEFA200CB21B4 /* SDL2.framework */,
+				89A376712216FA5F002A0297 /* SDL2.framework */,
 				89FF4B5D21CDE58100CB21B4 /* OpenGL.framework */,
 			);
 			name = Frameworks;
@@ -261,6 +261,7 @@
 		89FF4B5621CDDA7E00CB21B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -280,6 +281,7 @@
 		89FF4B5721CDDA7E00CB21B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

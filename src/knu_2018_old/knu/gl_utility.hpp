@@ -137,7 +137,7 @@ namespace knu
 
 			void build_compute()
 			{
-#ifdef _WIN32
+#ifdef WIN32
 				if (c_string_src.empty())
 					throw std::runtime_error("no compute shader");
 
@@ -371,8 +371,7 @@ namespace knu
             inline void unmap() {glUnmapBuffer(target);}
         };
         
-		// For now, to silence the warning, disable class vertex_array_object
-        /*enum class vao
+        enum class vao
         {
             vertex, vertex_texture, vertex_texture_normal, vertex_normal, vertex_color
         };
@@ -463,7 +462,7 @@ namespace knu
             {
                 glBindVertexArray(0);
             }
-        }; */ //class vao
+        };
         
         
     }
